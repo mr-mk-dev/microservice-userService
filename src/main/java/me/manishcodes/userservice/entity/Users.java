@@ -1,15 +1,14 @@
 package me.manishcodes.userservice.entity;
 
-import jakarta.persistence.*;
 import me.manishcodes.userservice.enums.Role;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "users")
+@Document()
 public class Users {
     @Id
-    @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private long userId;
 
     private String name;
